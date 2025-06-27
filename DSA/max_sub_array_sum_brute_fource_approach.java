@@ -1,6 +1,5 @@
 import java.util.*;
 
-// print the subarrays of an array.
 
 public class max_sub_array_sum_brute_fource_approach {
 
