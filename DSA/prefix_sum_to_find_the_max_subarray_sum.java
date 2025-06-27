@@ -13,16 +13,16 @@ public class prefix_sum_to_find_the_max_subarray_sum {
             int st=i;
             for(int j=i;j<arr.length;j++){
                 int ed=j;
-                int sum=0;
+                int currsum=0;
                 if(st==0){
-                    sum=prefix[ed];//When the subarray starts from index 0, the sum is directly the prefix at "ed"
+                    currsum=prefix[ed];//When the subarray starts from index 0, the sum is directly the prefix at "ed"
                 }else {
-                    sum = prefix[ed] - prefix[st - 1]; // formula to find the sum using the prefix array
+                    currsum = prefix[ed] - prefix[st - 1]; // formula to find the sum using the prefix array
                 }
-                maxSum=Math.max(sum,maxSum);
+                maxSum=Math.max(currsum,maxSum);
             }
         }
-        System.out.println("the max sum of subarrays is = "+max);
+        System.out.println("the max sum of subarrays is = "+maxSum);
     }
     public static void main(String[] args) {
         int[] arr={2,4,6,8,10};
