@@ -8,18 +8,18 @@ public class prefix_sum_to_find_the_max_subarray_sum {
         for(int i=1;i<arr.length;i++){
             prefix[i]=prefix[i-1]+arr[i];
         }
-        int max=0;
+        int maxSum=0;
         for(int i=0;i<arr.length;i++){
             int st=i;
             for(int j=i;j<arr.length;j++){
                 int ed=j;
-                int sum=0;
+                int currsum=0;
                 if(st==0){
-                    sum=prefix[ed];//When the subarray starts from index 0, the sum is directly the prefix at "ed"
+                    currsum=prefix[ed];//When the subarray starts from index 0, the sum is directly the prefix at "ed"
                 }else {
-                    sum = prefix[ed] - prefix[st - 1]; // formula to find the sum using the prefix array
+                    currsum = prefix[ed] - prefix[st - 1]; // formula to find the sum using the prefix array
                 }
-                max=Math.max(sum,max);
+                maxSum=Math.max(currsum,maxSum);
             }
         }
         System.out.println("the max sum of subarrays is = "+max);
