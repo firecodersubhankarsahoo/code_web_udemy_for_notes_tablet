@@ -22,7 +22,7 @@ public class prefix_sum_to_find_the_max_subarray_sum {
                 maxSum=Math.max(currsum,maxSum);
             }
         }
-        System.out.println("the max sum of subarrays is = "+max);
+        System.out.println("the max sum of subarrays is = "+maxSum);
     }
     public static void main(String[] args) {
         int[] arr={2,4,6,8,10};
