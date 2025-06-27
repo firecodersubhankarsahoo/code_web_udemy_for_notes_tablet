@@ -15,9 +15,9 @@ public class prefix_sum_to_find_the_max_subarray_sum {
                 int ed=j;
                 int sum=0;
                 if(st==0){
-                    sum=prefix[ed];
+                    sum=prefix[ed];//When the subarray starts from index 0, the sum is directly the prefix at "ed"
                 }else {
-                    sum = prefix[ed] - prefix[st - 1];
+                    sum = prefix[ed] - prefix[st - 1]; // formula to find the sum using the prefix array
                 }
                 max=Math.max(sum,max);
             }
