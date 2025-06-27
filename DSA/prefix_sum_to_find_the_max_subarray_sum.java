@@ -1,0 +1,31 @@
+import java.util.*;
+public class prefix_sum_to_find_the_max_subarray_sum {
+
+    public static  void subarray_max_sum(int[] arr){
+        int[] prefix=new int[arr.length];
+        //calculate prefix array
+        prefix[0]=arr[0];
+        for(int i=1;i<arr.length;i++){
+            prefix[i]=prefix[i-1]+arr[i];
+        }
+        int max=0;
+        for(int i=0;i<arr.length;i++){
+            int st=i;
+            for(int j=i;j<arr.length;j++){
+                int ed=j;
+                int sum=0;
+                if(st==0){
+                    sum=prefix[ed];
+                }else {
+                    sum = prefix[ed] - prefix[st - 1];
+                }
+                max=Math.max(sum,max);
+            }
+        }
+        System.out.println("the max sum of subarrays is = "+max);
+    }
+    public static void main(String[] args) {
+        int[] arr={2,4,6,8,10};
+        subarray_max_sum(arr);
+    }
+}
