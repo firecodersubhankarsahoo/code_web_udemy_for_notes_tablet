@@ -4,7 +4,7 @@ public class _11_remove_duplicates_from_a_string {
     static  StringBuilder ans=new StringBuilder();
     //stringbuilder is used instead of string to avoid immutability issues and for better performance
     public static void removeDuplicate(String str,int idx){
-        if(idx==str.length()-1){                    // Base case: if we have reached the end of the string
+        if(idx==str.length()){                    // Base case: if we have reached the end of the string
             System.out.println(ans);
             return;
         }
