@@ -25,10 +25,11 @@ public class max_subArray_sum_using_Kadanes_algorithm {
 
         for (int i = 0; i < arr.length; i++) {
             currSum += arr[i];          // Add current element to the current sum
+            maxSum = Math.max(currSum, maxSum); // Update maxSum if currentSum is larger
             if (currSum < 0) {
                 currSum = 0;            // Reset to 0 if current sum is negative
             }
-            maxSum = Math.max(currSum, maxSum); // Update maxSum if currentSum is larger
+
         }
         System.out.println("our max sub array sum is = " + maxSum);
     }
