@@ -22,7 +22,7 @@ public class _4_stock_span {
 
         for (int i = 1; i < stockPrice.length; i++) {
             int currPrice=stockPrice[i];
-            while (!st.isEmpty() && (currPrice>=stockPrice[st.peek()]) ){  // pop elements from the stack until we find an element which is greater than the current element
+            while (!st.isEmpty() && (currPrice>stockPrice[st.peek()]) ){  // pop elements from the stack until we find an element which is greater than the current element
                 st.pop();
             }
 
