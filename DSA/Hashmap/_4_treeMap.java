@@ -49,7 +49,39 @@ example:
 
 public class _4_treeMap {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+
+        TreeMap<Integer, String> map = new TreeMap<>();
+
+        // Insert entries
+        map.put(3, "Three");
+        map.put(1, "One");
+        map.put(2, "Two");
+
+        // Display entries (sorted by keys)
+        System.out.println("TreeMap Entries: " + map); // Output: {1=One, 2=Two, 3=Three}
+
+        // Access an entry(value for a key)
+        System.out.println("Value for key 2: " + map.get(2)); // Two
+
+        // Remove an entry(key-value pair)
+        map.remove(1);
+        System.out.println("After removing key 1: " + map); // Output: {2=Two, 3=Three}
+
+
+        // Iterate over entries
+        System.out.println("Iterating over TreeMap:");
+        for (Map.Entry<Integer, String> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
+
+        // Demonstrating custom comparator (descending order)
+        TreeMap<Integer, String> descMap = new TreeMap<>(Collections.reverseOrder());
+        descMap.put(3, "Three");
+        descMap.put(1, "One");
+        descMap.put(2, "Two");
+        System.out.println("TreeMap with custom comparator (descending order): " + descMap); // Output: {3=Three, 2=Two, 1=One}
+
+
 
 
     }
