@@ -1,18 +1,24 @@
-/*
-it is similar to HashMap but it maintains the insertion order of elements.
-it stores the elements in a doubly linked list.
-and stores the element in the same order as they are inserted.
-
-
-
-
- */
-
-
-
-
-
 import java.util.*;
+
+/*
+
+>>>>>>>> LinkedHashMap Overview <<<<<<<<
+
+✔ LinkedHashMap is similar to HashMap but it maintains the **insertion order**
+  of keys (or access order if configured).
+  it stores the element in the order they were added. and when we iterate over the map,
+  it returns the elements in the order they were inserted.
+
+✔ Time Complexity: same as HashMap
+   - get()    → O(1) average case
+   - put()    → O(1) average case
+   - remove() → O(1) average case
+  Because it is implemented as a **Hash table + Doubly Linked List**
+  (the linked list maintains the order of elements).
+
+
+* */
+
 
 public class _3_Linked_Hashmap {
     public static void main(String[] args) {
@@ -26,7 +32,7 @@ public class _3_Linked_Hashmap {
 
         // Display entries (in insertion order)
         System.out.println("LinkedHashMap Entries: " + linkedMap);
-         // Output: {A=1, B=2, C=3}  the output is in the  order of insertion but if it were a regular HashMap, order would be unpredictable
+        // Output: {A=1, B=2, C=3}  the output is in the  order of insertion but if it were a regular HashMap, order would be unpredictable
 
         // Access an entry(value for a key)
         System.out.println("Value for B: " + linkedMap.get("B")); // 2
