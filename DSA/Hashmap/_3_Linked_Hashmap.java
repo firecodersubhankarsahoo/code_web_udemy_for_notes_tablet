@@ -1,3 +1,17 @@
+/*
+it is similar to HashMap but it maintains the insertion order of elements.
+it stores the elements in a doubly linked list.
+and stores the element in the same order as they are inserted.
+
+
+
+
+ */
+
+
+
+
+
 import java.util.*;
 
 public class _3_Linked_Hashmap {
