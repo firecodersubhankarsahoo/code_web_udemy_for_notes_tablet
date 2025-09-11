@@ -42,3 +42,23 @@ public class _1_Majority_element {
 
     }
 }
+
+
+
+/*
+      if,      map = {1=4, 3=2, 2=1, 5=2}
+
+
+>>>>>>map.getOrDefault(num, 0)
+
+                This checks if the key num already exists in the HashMap.
+
+                If the key exists → returns its current count.
+
+                If the key does not exist → returns 0 (the default value provided).
+
+            Example:
+
+            First time num = 4 → not in map, so it returns 0.
+
+             when num = 3  present in map with count 2, so it returns 2.
