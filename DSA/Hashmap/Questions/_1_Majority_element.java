@@ -62,3 +62,9 @@ public class _1_Majority_element {
             First time num = 4 → not in map, so it returns 0.
 
              when num = 3  present in map with count 2, so it returns 2.
+
+
+
+
+
+ */
