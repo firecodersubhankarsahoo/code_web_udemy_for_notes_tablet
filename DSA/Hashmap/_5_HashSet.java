@@ -25,6 +25,31 @@ public class _5_HashSet {
 
 
 
+        //--------->>--------->>--------------- iterate  to traverse the set--------->>>----------------------->>>>>>--
+
+        HashSet<String>set1=new HashSet<>();
+        set1.add("delhi");
+        set1.add("mumbai");
+        set1.add("banglore");
+        set1.add("chennai");
+
+
+        // 1. Using Iterator(in java there is a built-in iterator class or interface which we can use to iterate over any collection)
+        Iterator it=set1.iterator();
+        while(it.hasNext()) {
+            System.out.println(it.next() + " "); // Output: 1 2 (order may vary)
+
+        }
+
+
+        // 2. Using for-each loop
+        for(String city:set1) {
+            System.out.println(city);
+        }
+        // 3. Using forEach method with lambda expression
+        set1.forEach(city -> System.out.println(city));
+
+
 
 
     }
